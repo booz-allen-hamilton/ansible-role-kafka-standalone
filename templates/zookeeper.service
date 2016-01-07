@@ -1,0 +1,9 @@
+[Unit]
+Description=zookeeper
+
+[Service]
+Type=simple
+ExecStart={{ install_dir }}/bin/zookeeper-server-start.sh {{ install_dir }}/config/zookeeper.properties
+
+[Install]
+WantedBy=multi-user.target

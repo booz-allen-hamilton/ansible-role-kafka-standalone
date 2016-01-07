@@ -1,0 +1,10 @@
+[Unit]
+Description=kafka
+Requires=zookeeper.service
+
+[Service]
+Type=simple
+ExecStart={{ install_dir }}/bin/kafka-server-start.sh {{ install_dir }}/config/server.properties
+
+[Install]
+WantedBy=multi-user.target
